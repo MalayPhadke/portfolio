@@ -2,21 +2,6 @@
 
 🙌 **Welcome to my personal portfolio website!** This repository holds the source code and files for my portfolio, built with HTML, CSS, and JavaScript. I continually update it to keep the design fresh and relevant. Each page includes a footer with a **Contact Me** section for easy connection.
 
-<p align="center">
-  <img src="/assets/images/Landing-Page.dark.gif" alt="Landing Page - Dark Mode">
-</p>
-
-<p align="center">
-  <img src="/assets/images/Landing-Page.light.gif" alt="Landing Page - Light Mode">
-</p>
-
-<p align="center">
-  <img src="/assets/images/SS-1.jpg" alt="Skills Section" width="800">
-</p>
-
-<p align="center">
-  <img src="/assets/images/SS-2.jpg" alt="Skills Section" width="800">
-</p>
 
 ## 🖥️ Website Overview
 The website consists of the following **Sections**:
