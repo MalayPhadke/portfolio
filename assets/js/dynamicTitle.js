@@ -1,7 +1,7 @@
 window.onload = function () {
   const favicon = document.getElementById('favicon')
   const pageTitle = document.title
-  const attentionMessage = 'Aman Jain'
+  const attentionMessage = 'Malay Phadke'
 
   document.addEventListener('visibilitychange', function (e) {
     const isPageActive = !document.hidden
