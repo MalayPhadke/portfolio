@@ -5,12 +5,12 @@
 // script.type = 'text/javascript';
 // script.src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js";
 // document.body.appendChild(script);
-
+//   <li class="nav-item nav-item-hover"><a class="nav-link" href="skill.html">Skill</a></li>
 // Header
 
 let header = $(`
 <nav class="navbar navbar-expand-lg fixed-top dark-theme" id="navbar">
-<a class="navbar-brand" href="index.html">Aman Jain </a>
+<a class="navbar-brand" href="index.html">Malay Phadke </a>
 <div class="hamburger_wrapper navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
   <div id="js-hamburger" class="hamburger">
@@ -25,7 +25,7 @@ let header = $(`
   <ul class="navbar-nav ml-auto" id = "navbar-content">
    <li class="nav-item nav-item-hover"><a class="nav-link" href="index.html">Home</a></li>
    <li class="nav-item nav-item-hover"><a class="nav-link" href="about.html">About</a></li>
-   <li class="nav-item nav-item-hover"><a class="nav-link" href="skill.html">Skill</a></li>
+
    <li class="nav-item nav-item-hover"><a class="nav-link" href="education.html">Education</a></li>
    <li class="nav-item nav-item-hover"><a class="nav-link" href="projects.html">Projects</a></li>
    <li class="nav-item 
@@ -161,7 +161,7 @@ let footer = $(`
 
     <div class="rounded-social-buttons tag">
     
-    <a class="social-button linkedin" href="http://www.linkedin.com/in/aman-jain-btech-it24" target="_blank" >
+    <a class="social-button linkedin" href="http://www.linkedin.com/in/malay-phadke-btech-it24" target="_blank" >
     <!-- svg code for linkedin icon -->
     <svg class="linkedin-icon-footer" xmlns="http://www.w3.org/2000/svg" width="35" viewBox="0 0 24 24" fill="#0e76a8"
         stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
@@ -174,7 +174,7 @@ let footer = $(`
 
 
     
-    <a class="social-button github" href="https://github.com/Hi-Aman-Jain" target="_blank">
+    <a class="social-button github" href="https://github.com/Hi-malay-phadke" target="_blank">
         <!-- SVG code for Github icon -->
         <svg class="github-icon-footer" width="45px" height="45px" viewBox="0 0 300 300">
         <!-- body -->
@@ -188,7 +188,7 @@ let footer = $(`
         </svg>
         </a>
         
-        <a class="social-button instagram" href="https://www.instagram.com/amanjain.hi/" target="_blank" >
+        <a class="social-button instagram" href="https://www.instagram.com/malayphadke.hi/" target="_blank" >
         <!-- svg code for instagram icon -->
           <svg class="instagram-icon-footer" x="0px" y="0px" viewBox="0 0 202.5 202.5"
             style="enable-background:new 0 0 202.5 202.5;">
