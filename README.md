@@ -1,57 +1,76 @@
-# 🌐 Personal Portfolio Website
+# Personal Portfolio 🔥
 
-🙌 **Welcome to my personal portfolio website!** This repository holds the source code and files for my portfolio, built with HTML, CSS, and JavaScript. I continually update it to keep the design fresh and relevant. Each page includes a footer with a **Contact Me** section for easy connection.
+:star: Star me on GitHub — it helps!
+
+[![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/rajaprerak/rajaprerak.github.io/commits/master)
+[![Website shields.io](https://img.shields.io/badge/website-up-yellow)](http://rajaprerak.github.io/)
+[![Ask Me Anything !](https://img.shields.io/badge/ask%20me-linkedin-1abc9c.svg)](https://www.linkedin.com/in/rajaprerak/)
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+### Website Preview
+#### Home Page
+<img src="website_images/HomePage.gif" width="900">
 
 
-## 🖥️ Website Overview
-The website consists of the following **Sections**:
+#### About Page
+<img src="website_images/AboutPage.png" width="900">
 
-## 🏠 Home
-The **Home** section serves as the landing page, featuring an engaging design with an animated background to capture attention. It includes a brief introduction about me, inviting visitors to explore more. Carefully chosen colors and typography give it a professional and modern feel.
 
----
+#### Projects Page
+<img src="website_images/ProjectPage.png" width="900">
+  
 
-## 👤 About
-The **About** section is designed to showcase my background, skills, and interests. It provides an in-depth look into who I am and what I offer, giving a comprehensive overview of my personal and professional journey.
 
----
+:star: Star me on GitHub — it helps!
 
-## 🛠️ Skills
-The **Skills** section highlights both my technical and soft skills. It uses animated rotating cards to display accreditations and a certificate button, making it interactive and visually engaging.
+## Features 📋
+⚡️ Fully Responsive\
+⚡️ Valid HTML5 & CSS3\
+⚡️ Typing animation using `Typed.js`\
+⚡️ Easy to modify
 
----
+## Installation & Deployment 📦
+- Clone the repository and modify the content of <b>index.html</b> 
+- Add or remove images from `assets/img/` directory as per your requirement.
+- Update the info of `projects` folder according to your need
+- Use [Github Pages](https://create-react-app.dev/docs/deployment/#github-pages) to create your own website.
+- To deploy your website, first you need to create github repository with name `<your-github-username>.github.io` and push the generated code to the `master` branch.
 
-## 🎓 Education & Experience
-The **Education** section presents my academic achievements in a clear, organized way. Below, the **Experience** section showcases my professional journey using sleek, interactive 3D cards for a captivating user experience.
+## Sections 📚
+✔️ About\
+✔️ Interests\
+✔️ Education\
+✔️ Online Certification\
+✔️ Experience\
+✔️ Projects \
+✔️ Skills \
+✔️ Resume\
+✔️ Contact Info
 
----
 
-## 💼 Projects
-The **Projects** section is designed to captivate visitors with a visually immersive layout. Each project is accompanied by images and descriptions that offer insights into the work. The intuitive navigation and interactive elements encourage exploration.
 
----
+## Tools Used 🛠️
+* <b>GitHub Pages</b> - To host my static website (HTML, CSS, JS).
 
-## 📞 Contact
-The **Contact** section is streamlined for ease of use, featuring all my contact information in a clean layout. An embedded Google Map enhances usability, ensuring visitors can quickly find ways to connect with me for opportunities or inquiries.
+## Contributing 💡
+#### Step 1
 
----
+- **Option 1**
+    - 🍴 Fork this repo!
 
-## 🚀 Website Implementation 
-To explore the portfolio website:
+- **Option 2**
+    - 👯 Clone this repo to your local machine.
 
-1. Clone or download this repository.
-2. Open the `index.html` file in a web browser.
-3. Use the navigation menu to move through sections like Projects, Skills, and Contact.
 
-Feel free to look around, check out my projects, and reach out if you have any questions or opportunities to discuss!
+#### Step 2
 
----
+- **Build your code** 🔨🔨🔨
 
-## 🤝 Contributions
-Contributions are not currently open as this is a personal project. However, feedback and suggestions are welcome! Please feel free to reach out through the **Get in Touch** section.
+#### Step 3
 
----
+- 🔃 Create a new pull request.
 
-Thank you for visiting my portfolio! 🎉 I hope you enjoy the animations and design, and find it informative and visually engaging.
+## License
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
-# --------------------------------------------------------------
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
