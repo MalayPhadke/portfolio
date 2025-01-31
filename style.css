@@ -18,7 +18,7 @@
 
   --light-gradient-text: linear-gradient(to right, #3299ff, #fff);
   --dark-secondary-btn: linear-gradient(to bottom, #0c1a39 60%, transparent);
-  --larger-font-size: 3rem;
+  --larger-font-size: 2rem;
   --medium-font-size: 2rem;
   --small-font-size: 1.3rem;
   --extra-small-font-size: 13px;
@@ -348,7 +348,7 @@ nav {
   -webkit-background-clip: text;
   font-weight: var(--font-weight-700);
   line-height: 1.5;
-  font-size: 3.1rem;
+  font-size: 2.5rem;
 }
 
 .hero__col .sub-heading {
@@ -1765,7 +1765,7 @@ body.dark .hire-btn {
     height: 60%;
   }
   .about-image img {
-    height: auto;
+    height: 100%;
     width: 100%;
   }
   .about__cards,
