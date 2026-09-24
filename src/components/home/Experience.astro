@@ -1,0 +1,33 @@
+---
+import SectionHeading from '@/components/SectionHeading.astro';
+import { researchExperience } from '@/data/experience';
+---
+
+<section class="page-section" aria-labelledby="experience">
+  <SectionHeading
+    label="Research path"
+    title="Experience"
+    intro="Selected roles that shaped the progression from perception and embodied systems to reliable multimodal models."
+  />
+  <div class="experience-list">
+    {researchExperience.map((item, index) => (
+      <article class:list={['experience-item', { current: index === 0 }]}>
+        <div class="experience-period">{item.period}</div>
+        <div class="experience-main">
+          <div class="experience-title-row">
+            <div>
+              <h3>{item.institution}</h3>
+              <p class="experience-role">{item.role}</p>
+            </div>
+            {index === 0 && <span class="current-marker">Current</span>}
+          </div>
+          {item.advisor && <p class="advisor">Advisor: <a href={item.advisorUrl} target="_blank" rel="noreferrer">{item.advisor}</a></p>}
+          <p>{item.summary}</p>
+          <ul class="tag-list" aria-label="Topics">
+            {item.tags.map((tag) => <li>{tag}</li>)}
+          </ul>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

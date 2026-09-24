@@ -1,0 +1,20 @@
+---
+import SectionHeading from '@/components/SectionHeading.astro';
+import PublicationItem from '@/components/publications/PublicationItem.astro';
+import { publications } from '@/data/publications';
+import { withBase } from '@/site.config';
+
+const selected = publications.filter((publication) => publication.featured || publication.year === 2026).slice(0, 3);
+---
+
+<section class="page-section" aria-labelledby="selected-research">
+  <SectionHeading
+    label="Selected work"
+    title="Research output"
+    href={withBase('publications/')}
+    linkLabel="All publications"
+  />
+  <div class="publication-list">
+    {selected.map((publication) => <PublicationItem publication={publication} />)}
+  </div>
+</section>

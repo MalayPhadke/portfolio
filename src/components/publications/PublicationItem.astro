@@ -1,0 +1,30 @@
+---
+import type { Publication } from '@/data/publications';
+
+interface Props { publication: Publication; compact?: boolean }
+const { publication, compact = false } = Astro.props;
+const isMalay = (author: string) => author.toLowerCase().includes('malay phadke');
+---
+
+<article class:list={['publication', { featured: publication.featured, compact }]}>
+  <div class="publication-year">{publication.year}</div>
+  <div class="publication-body">
+    <div class="publication-meta">
+      {publication.featured && <span class="featured-label">Featured</span>}
+      <span class="status-label">{publication.status}</span>
+    </div>
+    <h3>{publication.title}</h3>
+    <p class="authors">
+      {publication.authors.map((author, index) => (
+        <><span class:list={{ 'author-self': isMalay(author) }}>{author}</span>{index < publication.authors.length - 1 ? ', ' : ''}</>
+      ))}
+    </p>
+    <p class="venue">{publication.venue}</p>
+    {!compact && publication.summary && <p class="publication-summary">{publication.summary}</p>}
+    {publication.links.length > 0 && (
+      <div class="publication-links">
+        {publication.links.map((link) => <a href={link.url} target="_blank" rel="noreferrer">{link.label} <span aria-hidden="true">↗</span></a>)}
+      </div>
+    )}
+  </div>
+</article>

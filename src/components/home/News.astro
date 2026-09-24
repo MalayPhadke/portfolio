@@ -1,0 +1,13 @@
+---
+import SectionHeading from '@/components/SectionHeading.astro';
+import { news } from '@/data/content';
+---
+
+<section class="page-section news-section" aria-labelledby="news">
+  <SectionHeading label="Updates" title="News" />
+  <ol class="news-list">
+    {news.map((item) => (
+      <li><time>{item.date}</time><span>{item.text}</span></li>
+    ))}
+  </ol>
+</section>

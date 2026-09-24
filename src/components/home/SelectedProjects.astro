@@ -1,0 +1,19 @@
+---
+import SectionHeading from '@/components/SectionHeading.astro';
+import ProjectCard from '@/components/projects/ProjectCard.astro';
+import { projects } from '@/data/content';
+import { withBase } from '@/site.config';
+---
+
+<section class="page-section" aria-labelledby="selected-systems">
+  <SectionHeading
+    label="Selected systems"
+    title="Built along the way"
+    intro="Infrastructure, embedded systems, and deployed perception work that grounds the research in real engineering constraints."
+    href={withBase('projects/')}
+    linkLabel="All projects"
+  />
+  <div class="project-grid home-project-grid">
+    {projects.slice(0, 3).map((project) => <ProjectCard project={project} compact />)}
+  </div>
+</section>

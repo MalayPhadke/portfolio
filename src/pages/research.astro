@@ -1,0 +1,75 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
+import SystemsTrajectory from '@/components/home/SystemsTrajectory.astro';
+import { withBase } from '@/site.config';
+
+const questions = [
+  {
+    number: '01',
+    title: 'When does a model know that it may be wrong?',
+    text: 'I study semantic uncertainty for open-ended generation, where there is no fixed answer set and confidence must reflect consistency across possible meanings. This includes calibration, abstention, and black-box methods such as BiG-SURE.',
+    topics: ['semantic uncertainty', 'BiG-SURE', 'calibration & abstention']
+  },
+  {
+    number: '02',
+    title: 'Why are some wrong predictions made with high confidence?',
+    text: 'Low-entropy mistakes are among the most consequential model failures. I am interested in how confidence shortcuts arise, when correctness probes fail, and which internal signals genuinely predict answer reliability.',
+    topics: ['overconfident hallucinations', 'low-entropy errors', 'probe reliability']
+  },
+  {
+    number: '03',
+    title: 'What happens when evidence crosses modalities?',
+    text: 'Multimodal systems can fail in the encoder, the fusion process, or the reasoning trace. My work examines uncertainty and temporal reasoning across text, audio, image, and video evidence.',
+    topics: ['multimodal uncertainty', 'VideoLLM diagnosis', 'audio temporal reasoning']
+  },
+  {
+    number: '04',
+    title: 'Can we diagnose failures rather than only score them?',
+    text: 'A scalar confidence score is useful; a causal account of failure is better. I explore internal representations, mechanistic diagnostics, and post-hoc explanations that connect model behavior to actionable evidence.',
+    topics: ['representation probes', 'mechanistic diagnosis', 'post-hoc explainability']
+  }
+];
+---
+
+<BaseLayout
+  title="Research — Malay Phadke"
+  description="Research by Malay Phadke on reliable foundation models, multimodal uncertainty, audio and temporal reasoning, and failure-aware learning."
+>
+  <div class="container inner-page">
+    <header class="page-hero">
+      <p class="eyebrow">Research</p>
+      <h1>When should we trust the behavior of an intelligent system?</h1>
+      <p class="page-lede">
+        My work studies uncertainty, reasoning, and failure in foundation models. I am interested in methods that do more
+        than raise a score: they should reveal when models are brittle, explain where evidence breaks down, and support
+        safer decisions under ambiguity.
+      </p>
+    </header>
+
+    <section class="research-questions" aria-labelledby="questions-title">
+      <SectionHeading label="Guiding questions" title="A research agenda organized around failure" />
+      <div class="question-list">
+        {questions.map((question) => (
+          <article>
+            <span class="question-number">{question.number}</span>
+            <div>
+              <h3>{question.title}</h3>
+              <p>{question.text}</p>
+              <ul class="tag-list">{question.topics.map((topic) => <li>{topic}</li>)}</ul>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <SystemsTrajectory />
+
+    <aside class="research-cta">
+      <p class="eyebrow">Outputs</p>
+      <h2>See the work behind these questions.</h2>
+      <p>Accepted, submitted, and published work is labeled explicitly on the publications page.</p>
+      <a class="button button-primary" href={withBase('publications/')}>Browse publications <span aria-hidden="true">→</span></a>
+    </aside>
+  </div>
+</BaseLayout>

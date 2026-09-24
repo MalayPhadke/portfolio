@@ -1,0 +1,35 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PublicationItem from '@/components/publications/PublicationItem.astro';
+import { publications } from '@/data/publications';
+
+const years = [...new Set(publications.map((publication) => publication.year))];
+---
+
+<BaseLayout
+  title="Publications — Malay Phadke"
+  description="Publications by Malay Phadke on uncertainty estimation, multimodal language models, reinforcement learning, and intelligent systems."
+>
+  <div class="container inner-page publications-page">
+    <header class="page-hero compact-hero">
+      <p class="eyebrow">Publications</p>
+      <h1>Research output</h1>
+      <p class="page-lede">
+        Work on reliable foundation models, multimodal uncertainty, and learning-based systems. An asterisk denotes equal contribution.
+      </p>
+    </header>
+
+    {years.map((year) => (
+      <section class="publication-year-group" aria-labelledby={`year-${year}`}>
+        <h2 id={`year-${year}`}>{year}</h2>
+        <div class="publication-list">
+          {publications.filter((publication) => publication.year === year).map((publication) => (
+            <PublicationItem publication={publication} />
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <p class="page-note">Publication metadata is maintained in a BibTeX source file. Links appear only when a public URL is available.</p>
+  </div>
+</BaseLayout>

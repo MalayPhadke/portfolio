@@ -1,0 +1,93 @@
+---
+import Header from '@/components/layout/Header.astro';
+import Footer from '@/components/layout/Footer.astro';
+import { site, withBase } from '@/site.config';
+import '@/styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = `${site.name} — ${site.title}`,
+  description = site.description,
+  image = withBase('og-default.png')
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL(image, Astro.site);
+const sameAs = [site.links.scholar, site.links.github, site.links.linkedin].filter(Boolean);
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: site.name,
+  url: new URL(withBase(), Astro.site).href,
+  image: new URL(withBase(site.profileImage), Astro.site).href,
+  jobTitle: 'Project Associate / Researcher',
+  affiliation: { '@type': 'Organization', name: site.institution },
+  sameAs
+};
+---
+
+<!doctype html>
+<html lang="en" data-base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#fcfcfb" />
+    <link rel="icon" type="image/svg+xml" href={withBase('favicon.svg')} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <script is:inline>
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme = savedTheme || (prefersDark ? 'dark' : 'light');
+    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <Header />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      const themeButton = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');
+      const updateLabel = () => {
+        if (!themeButton) return;
+        const dark = document.documentElement.dataset.theme === 'dark';
+        themeButton.setAttribute('aria-label', `Switch to ${dark ? 'light' : 'dark'} theme`);
+        themeButton.setAttribute('title', `Switch to ${dark ? 'light' : 'dark'} theme`);
+      };
+      themeButton?.addEventListener('click', () => {
+        const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = next;
+        localStorage.setItem('theme', next);
+        updateLabel();
+      });
+      updateLabel();
+
+      document.addEventListener('keydown', (event) => {
+        if (event.metaKey || event.ctrlKey || event.altKey) return;
+        const target = event.target as HTMLElement;
+        if (target.matches('input, textarea, select, [contenteditable="true"]')) return;
+        const base = document.documentElement.dataset.base || '';
+        if (event.key.toLowerCase() === 'r') window.location.href = `${base}/research/`;
+        if (event.key.toLowerCase() === 'p') window.location.href = `${base}/publications/`;
+      });
+    </script>
+  </body>
+</html>

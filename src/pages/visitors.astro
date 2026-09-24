@@ -1,0 +1,22 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import VisitorMap from '@/components/VisitorMap.astro';
+---
+
+<BaseLayout
+  title="Visitor Map — Malay Phadke"
+  description="A small map showing the approximate locations from which Malay Phadke's academic website has been visited."
+>
+  <div class="container inner-page narrow-page">
+    <header class="page-hero compact-hero">
+      <p class="eyebrow">Visitor map</p>
+      <h1>Around the world</h1>
+      <p class="page-lede">A tiny map of where this website has been visited from.</p>
+    </header>
+    <VisitorMap />
+    <p class="privacy-note">
+      This site uses a lightweight visitor-map service to visualize approximate visitor locations. It does not display
+      individual identities or exact addresses. The integration will remain isolated to this page.
+    </p>
+  </div>
+</BaseLayout>

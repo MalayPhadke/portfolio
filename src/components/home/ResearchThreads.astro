@@ -1,0 +1,27 @@
+---
+import { researchThemes } from '@/data/content';
+import SectionHeading from '@/components/SectionHeading.astro';
+import { withBase } from '@/site.config';
+---
+
+<section class="page-section" aria-labelledby="research-threads">
+  <SectionHeading
+    label="Current focus"
+    title="Research threads"
+    intro="Four connected questions about how intelligent systems reason, fail, and communicate uncertainty."
+    href={withBase('research/')}
+    linkLabel="Research overview"
+  />
+  <div class="thread-grid">
+    {researchThemes.map((theme) => (
+      <article class="thread" tabindex="0">
+        <span class="thread-number" aria-hidden="true">{theme.number}</span>
+        <div>
+          <h3>{theme.title}</h3>
+          <p>{theme.description}</p>
+          <p class="thread-related">{theme.related}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,36 @@
+---
+import SocialLinks from '@/components/SocialLinks.astro';
+import { site, withBase } from '@/site.config';
+import { Image } from 'astro:assets';
+import profileImage from '@/assets/profile.png';
+---
+
+<aside class="profile-rail" aria-label="Profile">
+  <Image
+    class="profile-image"
+    src={profileImage}
+    widths={[252, 504]}
+    sizes="(max-width: 720px) 118px, 252px"
+    format="webp"
+    quality={84}
+    alt="Profile artwork selected by Malay Phadke"
+    decoding="async"
+    loading="eager"
+  />
+  <div class="profile-copy">
+    <h1>{site.name}</h1>
+    <p class="profile-role">Researcher <span>@</span> IISc</p>
+    <p class="profile-location">{site.location}</p>
+  </div>
+  <SocialLinks />
+  <div class="rail-block">
+    <p class="eyebrow">Research interests</p>
+    <ul class="interest-list">
+      {site.interests.map((interest) => <li>{interest}</li>)}
+    </ul>
+  </div>
+  <a class="button button-primary" href={withBase(site.links.cv)} target="_blank" rel="noreferrer">
+    Download CV <span aria-hidden="true">↓</span>
+  </a>
+  <p class="cv-meta">PDF · updated Sep 2026</p>
+</aside>

@@ -1,0 +1,27 @@
+---
+import SectionHeading from '@/components/SectionHeading.astro';
+import { trajectory } from '@/data/content';
+---
+
+<section class="page-section trajectory-section" aria-labelledby="systems-trajectory">
+  <SectionHeading
+    label="Technical trajectory"
+    title="From systems to reliability"
+    intro="A continuous path from building physical systems to asking when—and why—learned systems should be trusted."
+  />
+  <div class="signal-trace" aria-hidden="true">
+    <svg viewBox="0 0 720 44" preserveAspectRatio="none">
+      <path d="M0 23h86l12-1 8-11 11 24 11-18 9 6h84l10-2 11-13 10 27 12-20 10 8h99l14-1 10-15 12 31 12-22 11 7h103l10-2 11-10 10 22 12-17 10 7h94" />
+    </svg>
+  </div>
+  <ol class="trajectory" aria-label="Systems trajectory">
+    {trajectory.map((item, index) => (
+      <li tabindex="0">
+        <div class="trajectory-node"><span>{String(index + 1).padStart(2, '0')}</span></div>
+        <h3>{item.stage}</h3>
+        <p class="trajectory-label">{item.label}</p>
+        <p class="trajectory-detail">{item.detail}</p>
+      </li>
+    ))}
+  </ol>
+</section>

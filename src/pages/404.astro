@@ -1,0 +1,13 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { withBase } from '@/site.config';
+---
+
+<BaseLayout title="Page not found — Malay Phadke" description="The requested page could not be found.">
+  <div class="container inner-page narrow-page not-found">
+    <p class="error-code">404</p>
+    <h1>This signal didn’t resolve.</h1>
+    <p>The page may have moved, or the link may be incomplete.</p>
+    <a class="button button-primary" href={withBase()}>Return home</a>
+  </div>
+</BaseLayout>

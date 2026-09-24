@@ -1,0 +1,214 @@
+\documentclass[a4paper,10pt]{article}
+
+% ---------- Packages ----------
+\usepackage[margin=0.7in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{needspace}
+\usepackage{charter} % Professional serif font
+\newcommand{\link}[2]{\href{#1}{\textcolor{blue}{\underline{#2}}}}
+
+% ---------- Formatting ----------
+\setstretch{1.05}
+\pagestyle{empty}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black
+}
+
+% ---------- Section Styling ----------
+\titleformat{\section}
+  {\large\bfseries\color{black}}{}{0em}{}[\color{black}\titlerule]
+\titlespacing*{\section}{0pt}{0.6em}{0.3em}
+
+% ---------- List Formatting ----------
+\setlist[itemize]{leftmargin=1.2em, itemsep=2pt, topsep=1pt, parsep=0pt, partopsep=0pt}
+
+% ---------- Document ----------
+\begin{document}
+
+% ---------- Header ----------
+\begin{center}
+    {\LARGE \textbf{Malay Phadke}}\\[4pt]
+    \faPhone*~+91 9167703616 \quad | \quad
+    \faEnvelope~\href{mailto:malayp003@gmail.com}{malayp003@gmail.com} \quad | \quad
+    \faLinkedin~\href{https://linkedin.com/in/malay-phadke}{linkedin.com/in/malay-phadke} \quad | \quad
+    \faGlobe~\href{https://malayphadke.github.io/portfolio/}{Portfolio}
+    % \quad | \quad \faGithub~\href{https://github.com/<your-handle>}{GitHub}
+\end{center}
+
+% ---------- Research Profile ----------
+% \section*{Research Profile}
+% Researcher building reliable multimodal systems, with a focus on uncertainty estimation, calibration, and interpretability. 
+
+% \textbf{Research interests:} trustworthy multimodal reasoning, grounding in audio/vision-language models, interpretable decision-making.
+
+% ---------- Education ----------
+\section*{Education}
+\textbf{Sardar Patel Institute of Technology}, Mumbai, Maharashtra \hfill \textit{2021--2025}\\
+B.Tech in Electronics and Telecommunication Engineering\\
+Minor in Computer Engineering\\
+CGPA: 9.4/10 \hfill Department Rank: \textbf{2/152}\\
+Relevant Coursework: Linear Algebra, Probability and Stochastic Processes, Digital Signal Processing, Artificial Intelligence and Machine Learning, Information Theory, Data Structures and Algorithms
+% ---------- Research Experience ----------
+\section*{Research Experience}
+
+\textbf{Indian Institute of Science (IISc), Bengaluru} \hfill \textit{Aug 2025 -- Present}\\
+\textit{Project Associate} \hfill \textit{Advisor: \link{https://eecs.iisc.ac.in/people/sriram-ganapathy/}{Prof. Sriram Ganapathy}} \vspace{-0.4em}
+\begin{itemize}
+    \item Worked on uncertainty estimation for multimodal language models in open-text generation.
+    \item Studied post-training methods for improved calibration and abstention behavior.
+    \item Contributed to benchmark design for continuous uncertainty evaluation in multimodal systems.
+    \item Investigating overconfident hallucinations in large language models.
+    \item Building datasets and evaluation setups for temporal reasoning in large audio language models.
+    \item Developing mechanistic interpretability approaches for hallucination detection and uncertainty estimation in VideoLLMs.
+\end{itemize}
+
+\textbf{Australian National University} \hfill \textit{Apr 2025 -- Aug 2025}\\
+\textit{Research Intern (Remote)} \hfill \textit{Advisor: \link{https://comp.anu.edu.au/people/chirath-hettiarachchi/}{Dr. Chirath Hettiarachchi}} \vspace{-0.4em}
+\begin{itemize}
+    \item Worked on explainable reinforcement learning for glucose monitoring in Type 1 diabetes.
+    \item Developed a post-hoc SHAP-based explainability framework to extract clinically relevant insights from reinforcement learning policies.
+\end{itemize}
+
+\textbf{MITACS, University of Calgary, Calgary, Alberta} \hfill \textit{Jun 2024 -- Aug 2024}\\
+\textit{Research Intern} \hfill \textit{Advisor: \link{https://profiles.ucalgary.ca/mahdis-bisheban}{Dr. Mahdis Bisheban}} \vspace{-0.4em}
+\begin{itemize}
+    \item Explored reinforcement learning approaches for cooperative UAV--UGV path planning in search-and-rescue environments.
+    \item Worked with ROS, Gazebo, and AirSim to study coordination and planning in simulation-based settings.
+    \item Gained exposure to sim-to-real challenges in evaluating learning-based planning systems.
+\end{itemize}
+
+\textbf{Indian Institute of Technology Bombay, Mumbai, Maharashtra} \hfill \textit{Jan 2024 -- May 2024}\\
+\textit{Research Intern} \vspace{-0.4em}
+\begin{itemize}
+    \item Worked on contactless biometric authentication using palmprints, deep learning, and multiresolution analysis.
+    \item Designed a palmprint ROI extraction pipeline using MediaPipe.
+    \item Developed deep Siamese models with Shearlet-based features for palmprint matching.
+\end{itemize}
+
+% ---------- Publications ----------
+\section*{Publications \hfill \normalfont\small S = In Submission,\; * = Equal Contribution}
+
+\noindent
+[\textbf{C.1}] Debarpan Bhattacharya*, \textbf{Malay Phadke*}, Sriram Ganapathy,\\ 
+``\textit{BiG-SURE - Bipartite Graph Spectral energy for Uncertainty and Reliability Estimation of LLMs},''\\
+\textit{Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026), (Main Conference)}. \; 
+
+
+% \noindent
+% [\textbf{S.2}] Debarpan Bhattacharya*, \textbf{Malay Phadke*}, Md Sahil Ansari, Kalash Kala, Sriram Ganapathy,\\
+% ``\textit{Quantifying and Evaluating Continuity Properties of Multi-modal LLMs},''\\
+% \textit{Under Review at EMNLP 2026}. \;
+
+\vspace{0.25em}
+\noindent
+[\textbf{S.1}] Debarpan Bhattacharya*, \textbf{Malay Phadke*}, Md Sahil Ansari, Sriram Ganapathy,\\
+``\textit{Multimodal Open-text Uncertainty Estimation for Large Language Models},''\\
+\textit{Under Submission at ACM Transactions on Intelligent Systems and Technology} \;
+
+
+
+\vspace{0.25em}
+\noindent
+[\textbf{S.2}] \textbf{Malay Phadke*}, Akshay Gokhale*, Om Patil, Neel Patel, Preyes Parab, Sujata Kulkarni, and Kiran Talele\\
+``\textit{Multi-Agent Reinforcement Learning for Path Planning: A Structured Survey Across UAV, UGV, and Hybrid Robotic Systems},''\\
+\textit{Under Submission at IEEE Transactions on Emerging Topics in Computational Intelligence}
+
+\vspace{0.25em}
+\noindent
+[\textbf{J.1}] S. Kulkarni, \textbf{M. Phadke}, A. Sawant, N. Patel, O. Patil,\\
+``\textit{Advancements in Seismic Data Collection and Analysis Through Machine Learning},''\\
+\textit{Indonesian Journal of Electrical Engineering and Computer Science}.\\
+DOI: \href{https://doi.org/10.11591/ijeecs.v37.i3.pp2058-2068}{10.11591/ijeecs.v37.i3.pp2058-2068}
+
+\section*{Industry Experience}
+
+\textbf{\link{https://www.tanuh.ai/}{TANUH}, Bangalore, Karnataka} \hfill \textit{July 2026 -- Present}\\
+\textit{Engineering Consultant} \vspace{-0.4em}
+\begin{itemize}
+    \item Working on AI models for oral cancer screening.
+\end{itemize}
+
+\textbf{Vista IoT, Mumbai, Maharashtra} \hfill \textit{Jan 2024 -- May 2024}\\
+\textit{Project Lead} \vspace{-0.4em}
+\begin{itemize}
+    \item Led a consulting project to develop an IoT gateway for industrial applications.
+    \item Implemented communication support for protocols including MODBUS, OPC-UA, and IEC standards.
+\end{itemize}
+
+\textbf{Drona Aviation, Mumbai, Maharashtra} \hfill \textit{Jun 2023 -- Sep 2023}\\
+\textit{Software Developer} \vspace{-0.4em}
+\begin{itemize}
+    \item Developed Python and C++ ROS packages for nano-drone control and camera streaming.
+    \item Built gesture-control and object-tracking modules and supported migration from ROS1 to ROS2.
+    \item Optimized flight-control firmware to improve latency and stability.
+    \item Worked on remote operation of a hardware drone over the internet using the MultiWii protocol.
+\end{itemize}
+
+% ---------- Patents ----------
+\needspace{5\baselineskip}
+\section*{Patents}
+\textbf{NAZAR – ML-based Solution for Surveillance Security}\\
+Indian Patent Office – Application No: 202421053039\\[0.2em]
+\textbf{UAV–UGV Collaboration for Port Monitoring}\\
+Indian Patent Office – Application No: 202421073880
+
+
+% ---------- Achievements ----------
+\section*{Achievements}
+\begin{itemize}
+    \item Selected for MITACS Globalink Research Internship at University of Calgary, Alberta, Canada (Top 3000 / 40,000+ applicants).
+    \item Awarded Academic Excellence Award for outstanding undergraduate performance at SPIT.
+    \item Ranked 1st in the Electronics and Telecommunication Department for three consecutive academic years.
+    \item Won Kavach Hackathon (National Cybersecurity Challenge, 3900+ teams) for cryptocurrency analysis.
+\end{itemize}
+
+
+% ---------- Selected Projects ----------
+\section*{Selected Projects}
+
+% \textbf{AuralNav: Deep Reinforcement Learning for Audio Source Localization and Separation}\\
+% \textit{Based on OtoWorld framework (\href{https://github.com/pseeth/otoworld}{github.com/pseeth/otoworld})}\vspace{-0.4em}
+% \begin{itemize}
+%     \item Built an RL environment for spatial navigation using audio-only input.
+%     \item Explored DQN+RNN and DPRNN models for enhanced source separation with asteroid library.
+%     \item Extended setup to multi-agent and multiple audio sources.
+% \end{itemize}
+\textbf{CLARIS: Cluster Access and Job Management Platform}\\
+\textit{FastAPI, Next.js, Docker}\vspace{-0.4em}
+\begin{itemize}
+    \item Built a web platform for unified access to multiple GPU clusters within the IISc network.
+    \item Developed a FastAPI backend and Next.js frontend to support job submission, log and file inspection, terminal access, and cluster management through a single interface.
+    \item Used Docker-based user sessions to maintain isolated connection state for each login and integrated an LLM-based assistant for log inspection and issue resolution.
+\end{itemize}
+
+\textbf{Drones for Smart Agriculture (IEEE AESS Global Sponsored Project)}\vspace{-0.4em}
+\begin{itemize}
+    \item UAV--UGV collaboration system funded \$25k by IEEE AESS Global under DSTEI scheme.
+    \item Designed an end-to-end pipeline for crop-health classification comparing EfficientNet, MobileNet, ResNet, and YOLOv7 along with classical image preprocessing algorithms.
+    \item Deployed on NVIDIA Jetson Orin Nano for real-time inference.
+\end{itemize}
+
+% ---------- Certifications ----------
+\section*{Certifications}
+\begin{itemize}
+    \item Coursera – DeepLearning.AI TensorFlow Professional Certificate
+    \item Codecademy – Python, C/C++, Go, Ruby
+    \item NPTEL – Computer Vision and Image Processing (Topper)
+    \item NPTEL – Introduction to Embedded Systems (Topper)
+    \item TOEFL iBT – 111 / 120 (R28, L28, S27, W28)
+\end{itemize}
+
+% ---------- Skills ----------
+\section*{Tools \& Technologies}
+Python, C/C++, TensorFlow, PyTorch, MATLAB, ROS/ROS2, AirSim
+
+\end{document}

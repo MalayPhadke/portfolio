@@ -1,0 +1,27 @@
+---
+interface Props {
+  project: {
+    title: string;
+    subtitle: string;
+    category: string;
+    stack: string;
+    description: string;
+    highlights: readonly string[];
+  };
+  compact?: boolean;
+}
+const { project, compact = false } = Astro.props;
+---
+
+<article class:list={['project-card', { compact }]}>
+  <p class="project-category">{project.category}</p>
+  <h3>{project.title}</h3>
+  <p class="project-subtitle">{project.subtitle}</p>
+  <p>{project.description}</p>
+  <p class="project-stack">{project.stack}</p>
+  {!compact && (
+    <ul class="project-highlights">
+      {project.highlights.map((highlight) => <li>{highlight}</li>)}
+    </ul>
+  )}
+</article>

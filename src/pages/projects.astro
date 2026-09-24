@@ -1,0 +1,24 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ProjectCard from '@/components/projects/ProjectCard.astro';
+import { projects } from '@/data/content';
+---
+
+<BaseLayout
+  title="Projects — Malay Phadke"
+  description="Selected research systems, robotics, embedded systems, and applied AI projects by Malay Phadke."
+>
+  <div class="container inner-page">
+    <header class="page-hero compact-hero">
+      <p class="eyebrow">Projects</p>
+      <h1>Systems that ground the research</h1>
+      <p class="page-lede">
+        Selected engineering work across research infrastructure, robotics, embedded systems, and applied perception.
+        These projects are the practical through-line behind my current interest in reliable models.
+      </p>
+    </header>
+    <div class="project-grid project-page-grid">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </div>
+</BaseLayout>

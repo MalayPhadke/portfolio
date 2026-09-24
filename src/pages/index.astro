@@ -1,0 +1,44 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Sidebar from '@/components/layout/Sidebar.astro';
+import ResearchThreads from '@/components/home/ResearchThreads.astro';
+import SelectedWorks from '@/components/home/SelectedWorks.astro';
+import News from '@/components/home/News.astro';
+import SystemsTrajectory from '@/components/home/SystemsTrajectory.astro';
+import Experience from '@/components/home/Experience.astro';
+import SelectedProjects from '@/components/home/SelectedProjects.astro';
+import { site } from '@/site.config';
+
+const currentStatus = site.conferenceMode ? site.conferenceStatus : site.currently;
+---
+
+<BaseLayout>
+  <div class="home-shell container">
+    <Sidebar />
+    <div class="home-content">
+      <section class="intro" aria-labelledby="intro-title">
+        <p class="eyebrow">Hello</p>
+        <h2 id="intro-title">Hi, I’m Malay.</h2>
+        <p class="intro-lede">{site.tagline}</p>
+        <p>
+          I am a researcher at the Indian Institute of Science (IISc), working with{' '}
+          <a href="https://eecs.iisc.ac.in/people/sriram-ganapathy/" target="_blank" rel="noreferrer">Prof. Sriram Ganapathy</a>.
+          My current research studies uncertainty, failure modes, and reasoning in large language and multimodal models,
+          with the broader goal of making intelligent systems more reliable.
+        </p>
+        <p>
+          My path into this problem has been deliberately broad—from embedded systems, robotics, and signal processing
+          to computer vision, audio, language models, and multimodal AI. I am especially interested in understanding when
+          powerful models fail confidently, what their internal representations reveal about those failures, and how that
+          knowledge can improve evaluation and decision-making.
+        </p>
+      </section>
+      <ResearchThreads />
+      <SelectedWorks />
+      <News />
+      <SystemsTrajectory />
+      <Experience />
+      <SelectedProjects />
+    </div>
+  </div>
+</BaseLayout>
